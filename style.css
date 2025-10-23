@@ -132,6 +132,121 @@ body {
     object-fit: cover;
 }
 
+/* ========== ABOUT SECTION ========== */
+.about {
+    padding: 100px 80px;
+    background: #fff;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    width: 320px;
+    border-radius: 20px;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    color: #1e293b;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Skill bars */
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.skill span {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.bar {
+    background: #eee;
+    border-radius: 20px;
+    height: 8px;
+    width: 100%;
+    position: relative;
+}
+
+.fill {
+    height: 8px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.fill::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -4px;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid currentColor;
+}
+
+/* Warna untuk tiap skill */
+.red {
+    background: linear-gradient(90deg, #b91c1c, #ef4444);
+    color: #ef4444;
+}
+
+.orange {
+    background: linear-gradient(90deg, #b45309, #f59e0b);
+    color: #f59e0b;
+}
+
+.gray {
+    background: linear-gradient(90deg, #334155, #94a3b8);
+    color: #94a3b8;
+}
+
+.blue {
+    background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+    color: #3b82f6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+}
+
+
 /* ========== FOOTER ========== */
 footer {
     text-align: center;
