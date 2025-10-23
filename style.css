@@ -1,256 +1,126 @@
-/* ========== RESET ========== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f2f7fc;
-    color: #333;
+/* ===== HEADER / NAVBAR ===== */
+header {
+    background: linear-gradient(90deg, #0d47a1, #1976d2);
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-/* ========== NAVBAR ========== */
 .navbar {
+    width: 90%;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
-    background: transparent;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 100;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #111;
+    font-size: 1.5em;
+    font-weight: 700;
 }
 
 .logo span {
-    color: #3b82f6;
+    color: #ffcc00;
 }
 
-.navbar ul {
+.nav-links {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 30px;
 }
 
-.navbar ul li a {
+.nav-links a {
     text-decoration: none;
-    color: #333;
+    color: white;
     font-weight: 500;
-    transition: 0.3s;
+    transition: color 0.3s;
 }
 
-.navbar ul li a:hover {
-    color: #3b82f6;
+.nav-links a:hover {
+    color: #ffcc00;
 }
 
-.btn-primary {
-    background-color: #3b82f6;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.btn-primary:hover {
-    background-color: #2563eb;
-}
-
-/* ========== HERO SECTION ========== */
+/* ===== HERO SECTION ===== */
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 140px 80px 60px;
+    background: #f5f7fa;
+    text-align: center;
+    padding: 100px 20px;
 }
 
-.hero-text {
-    flex: 1;
-    max-width: 550px;
+.hero h1 span {
+    color: #1976d2;
 }
 
-.hero-text h3 {
-    font-size: 22px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.hero-text h1 {
-    font-size: 60px;
-    font-weight: 800;
-    color: #1e293b;
-    margin-bottom: 20px;
-}
-
-.hero-text h1 span {
-    color: #3b82f6;
-}
-
-.hero-text p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-.review {
-    display: flex;
-    align-items: center;
-    background: white;
-    border-radius: 15px;
-    padding: 10px 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: fit-content;
-}
-
-.review img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-/* ========== HERO IMAGE ========== */
-.hero-image {
-    flex: 1;
+/* ===== ABOUT SECTION ===== */
+.about-section {
+    background: #fff;
+    padding: 80px 10%;
     display: flex;
     justify-content: center;
-}
-
-.hero-image img {
-    width: 380px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-/* ========== ABOUT SECTION ========== */
-.about {
-    padding: 100px 80px;
-    background: #fff;
+    align-items: center;
 }
 
 .about-container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
     flex-wrap: wrap;
-}
-
-.about-image {
-    flex: 1;
-    text-align: center;
+    gap: 50px;
+    align-items: center;
 }
 
 .about-image img {
-    width: 320px;
-    border-radius: 20px;
+    width: 250px;
+    border-radius: 10px;
 }
 
-.about-text {
-    flex: 1;
-    max-width: 500px;
+.about-content {
+    max-width: 600px;
 }
 
-.about-text h2 {
-    font-size: 32px;
-    color: #1e293b;
+.about-content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.about-content p {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* ===== SKILLS ===== */
+.skill {
     margin-bottom: 15px;
 }
 
-.about-text p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 40px;
-}
-
-/* Skill bars */
-.skills {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.skill span {
+.skill label {
     font-weight: 600;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
-.bar {
-    background: #eee;
-    border-radius: 20px;
-    height: 8px;
+progress {
     width: 100%;
-    position: relative;
-}
-
-.fill {
     height: 8px;
-    border-radius: 20px;
-    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    appearance: none;
 }
 
-.fill::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: -4px;
-    width: 15px;
-    height: 15px;
-    background: #fff;
-    border-radius: 50%;
-    border: 2px solid currentColor;
+progress::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 5px;
 }
 
-/* Warna untuk tiap skill */
-.red {
-    background: linear-gradient(90deg, #b91c1c, #ef4444);
-    color: #ef4444;
-}
-
-.orange {
-    background: linear-gradient(90deg, #b45309, #f59e0b);
-    color: #f59e0b;
-}
-
-.gray {
-    background: linear-gradient(90deg, #334155, #94a3b8);
-    color: #94a3b8;
-}
-
-.blue {
-    background: linear-gradient(90deg, #1e3a8a, #3b82f6);
-    color: #3b82f6;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-text {
-        max-width: 100%;
-    }
-}
-
-
-
-/* ========== FOOTER ========== */
-footer {
-    text-align: center;
-    padding: 30px;
-    color: #777;
+progress::-webkit-progress-value {
+    background: linear-gradient(90deg, #ff6b6b, #f06595);
+    border-radius: 5px;
 }

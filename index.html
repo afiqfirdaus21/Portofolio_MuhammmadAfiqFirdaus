@@ -1,105 +1,66 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Afiq Firdaus | UI & UX Designer</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio - Muhammad Afiq Firdaus</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <!-- ========== NAVBAR ========== -->
-    <header class="navbar">
-        <div class="logo">Afiq<span>Dev</span></div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact Us</a></li>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Afiq Firdaus<span>Web Designer</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <a href="#" class="btn-primary">Let's Talk</a>
     </header>
 
-    <!-- ========== HERO SECTION ========== -->
-    <section class="hero">
+    <section id="home" class="hero">
         <div class="hero-text">
-            <h3>Hi I am</h3>
-            <h1><span>UI & UX</span> Designer</h1>
-            <p>
-                With a passion for clean, intuitive, and effective design, I create digital products that enhance user
-                engagement.
-                Delivering aesthetic and interactive designs that make a lasting impact.
-            </p>
-            <div class="review">
-                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="user">
-                <div>
-                    ⭐⭐⭐⭐⭐ <br>
-                    <small>20k+ Customer Review</small>
-                </div>
-            </div>
-        </div>
-
-        <div class="hero-image">
-            <img src="assets/foto afiq.jpg" alt="Afiq">
+            <h1>Hi, I'm <span>Muhammad Afiq Firdaus</span></h1>
+            <p>Creative Frontend Developer & Designer</p>
         </div>
     </section>
 
-    <!-- ========== ABOUT SECTION ========== -->
-    <section class="about" id="about">
+    <section id="about" class="about-section">
         <div class="about-container">
             <div class="about-image">
-                <img src="assets/foto afiq.jpg" alt="Afiq Photo">
+                <img src="assets/foto afiq.jpg" alt="Profile">
             </div>
-            <div class="about-text">
+            <div class="about-content">
                 <h2>About Me</h2>
                 <p>
-                    Passionate UI/UX Designer with a creative approach to crafting intuitive and engaging user
-                    experiences.
-                    I focus on clean, functional, and visually appealing designs that make a lasting impression.
+                    Passionate UI/UX Designer with a creative approach to crafting intuitive
+                    and engaging user experiences.
                 </p>
 
                 <div class="skills">
                     <div class="skill">
-                        <span>UX</span>
-                        <div class="bar">
-                            <div class="fill red" style="width: 95%;"></div>
-                        </div>
+                        <label>UX</label>
+                        <progress value="90" max="100"></progress>
                     </div>
-
                     <div class="skill">
-                        <span>Website Design</span>
-                        <div class="bar">
-                            <div class="fill orange" style="width: 90%;"></div>
-                        </div>
+                        <label>Website Design</label>
+                        <progress value="80" max="100"></progress>
                     </div>
-
                     <div class="skill">
-                        <span>App Design</span>
-                        <div class="bar">
-                            <div class="fill gray" style="width: 75%;"></div>
-                        </div>
+                        <label>App Design</label>
+                        <progress value="70" max="100"></progress>
                     </div>
-
                     <div class="skill">
-                        <span>Graphic Design</span>
-                        <div class="bar">
-                            <div class="fill blue" style="width: 85%;"></div>
-                        </div>
+                        <label>Graphic Design</label>
+                        <progress value="85" max="100"></progress>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-
-    <footer>
-        <p>© 2025 Muhammad Afiq Firdaus. All Rights Reserved.</p>
-    </footer>
 </body>
 
 </html>
