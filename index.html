@@ -57,7 +57,6 @@
     </section>
 
     <!-- ===== PORTFOLIO ===== -->
-    <!-- ===== PORTFOLIO ===== -->
     <section id="portfolio" class="portfolio-section">
         <h2 data-aos="fade-up">My Portfolio</h2>
         <p class="portfolio-desc" data-aos="fade-up">
@@ -73,22 +72,6 @@
                     <span>Design</span>
                     <h3 onclick="toggleProjectDetails()">Website Landing Page Design & Service about Tracer Study</h3>
                 </div>
-            </div>
-
-            <!-- Hidden details for Project 1 -->
-            <div id="project1-details" class="project-details">
-                <div class="project-gallery">
-                    <img src="tracer1.png" alt="Screenshot 1">
-                    <img src="tracer2.png" alt="Screenshot 2">
-                    <img src="tracer3.png" alt="Screenshot 3">
-                </div>
-                <p class="project-desc">
-                    This project is a web-based tracer study platform designed for universities to collect and analyze
-                    alumni data.
-                    Built with Laravel and integrated with a modern UI design, it focuses on usability, responsive
-                    layout, and
-                    effective data visualization to support institutional decision-making.
-                </p>
             </div>
 
             <!-- === PROJECT 2 === -->
@@ -109,7 +92,22 @@
                 </div>
             </div>
         </div>
+
+        <!-- === Project 1 details (move this outside grid) === -->
+        <div id="project1-details" class="project-details">
+            <div class="project-gallery">
+                <img src="tracer1.png" alt="Screenshot 1">
+                <img src="tracer2.png" alt="Screenshot 2">
+                <img src="tracer3.png" alt="Screenshot 3">
+            </div>
+            <p class="project-desc">
+                This project is a web-based tracer study platform designed for universities to collect and analyze
+                alumni data. Built with Laravel and integrated with a modern UI design, it focuses on usability,
+                responsive layout, and effective data visualization to support institutional decision-making.
+            </p>
+        </div>
     </section>
+
 
 
     <footer data-aos="fade-up">
