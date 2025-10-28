@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Afiq Firdaus | Web Developer</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- ===== AOS (Animate On Scroll) ===== -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- ========== HERO SECTION ========== -->
-    <section class="hero">
-        <div class="hero-text">
+    <section class="hero" data-aos="fade-up">
+        <div class="hero-text" data-aos="fade-right">
             <h3>Hello World!</h3>
             <h3>I'm Afiq Firdaus</h3>
             <h1><span>Web</span> Developer</h1>
@@ -23,40 +26,44 @@
                 myself and advance my career in the future.
             </p>
 
-            <!-- Tambahkan tombol CV di sini -->
-            <a href="assets/CV Muhammad Afiq Firdaus.pdf" target="_blank" class="btn-primary">View My CV</a>
-            <!-- Jika menggunakan Google Drive, ganti href-nya dengan link Drive kamu -->
+            <!-- Tombol CV -->
+            <a href="assets/CV Muhammad Afiq Firdaus.pdf" target="_blank" class="btn-primary" data-aos="zoom-in"
+                data-aos-delay="200">
+                View My CV
+            </a>
         </div>
 
-        <div class="hero-image">
+        <div class="hero-image" data-aos="fade-left">
             <img src="assets/after remove bg.png" alt="Afiq">
         </div>
     </section>
 
-    <!-- ===== PORTFOLIO ===== -->
-    <section id="portfolio" class="portfolio-section">
-        <h2>My Portfolio</h2>
-        <p class="portfolio-desc">
+    <!-- ========== PORTFOLIO SECTION ========== -->
+    <section id="portfolio" class="portfolio-section" data-aos="fade-up">
+        <h2 data-aos="fade-down">My Portfolio</h2>
+        <p class="portfolio-desc" data-aos="fade-up">
             Explore a collection of my UI/UX design projects, each crafted to deliver seamless, user-centered
             experiences.
         </p>
 
         <div class="portfolio-grid">
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-aos="zoom-in">
                 <img src="tracer study.png" alt="Project 1" />
                 <div class="portfolio-info">
                     <span>Design</span>
                     <h3>Website Landing Page Design & Service about Tracer Study</h3>
                 </div>
             </div>
-            <div class="portfolio-item">
+
+            <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="100">
                 <img src="portfolio2.png" alt="Project 2" />
                 <div class="portfolio-info">
                     <span>Design</span>
                     <h3>Website Landing Page Design & Service</h3>
                 </div>
             </div>
-            <div class="portfolio-item">
+
+            <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="200">
                 <img src="portfolio3.png" alt="Project 3" />
                 <div class="portfolio-info">
                     <span>Design</span>
@@ -66,10 +73,20 @@
         </div>
     </section>
 
-
-    <footer>
+    <!-- ========== FOOTER ========== -->
+    <footer data-aos="fade-up">
         <p>© 2025 Muhammad Afiq Firdaus. All Rights Reserved.</p>
     </footer>
+
+    <!-- ===== AOS Script (harus sebelum penutup body) ===== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // durasi animasi
+            once: false,    // true = hanya animasi saat pertama scroll
+            mirror: true,   // aktif juga saat scroll ke atas
+        });
+    </script>
 </body>
 
 </html>
