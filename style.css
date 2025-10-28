@@ -214,120 +214,6 @@ body {
     object-fit: cover;
 }
 
-/* ========== ABOUT SECTION ========== */
-.about {
-    padding: 100px 80px;
-    background: #fff;
-}
-
-.about-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-    flex-wrap: wrap;
-}
-
-.about-image {
-    flex: 1;
-    text-align: center;
-}
-
-.about-image img {
-    width: 320px;
-    border-radius: 20px;
-}
-
-.about-text {
-    flex: 1;
-    max-width: 500px;
-}
-
-.about-text h2 {
-    font-size: 32px;
-    color: #1e293b;
-    margin-bottom: 15px;
-}
-
-.about-text p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 40px;
-}
-
-/* Skill bars */
-.skills {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.skill span {
-    font-weight: 600;
-    display: block;
-    margin-bottom: 8px;
-}
-
-.bar {
-    background: #eee;
-    border-radius: 20px;
-    height: 8px;
-    width: 100%;
-    position: relative;
-}
-
-.fill {
-    height: 8px;
-    border-radius: 20px;
-    position: relative;
-}
-
-.fill::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: -4px;
-    width: 15px;
-    height: 15px;
-    background: #fff;
-    border-radius: 50%;
-    border: 2px solid currentColor;
-}
-
-/* Warna untuk tiap skill */
-.red {
-    background: linear-gradient(90deg, #b91c1c, #ef4444);
-    color: #ef4444;
-}
-
-.orange {
-    background: linear-gradient(90deg, #b45309, #f59e0b);
-    color: #f59e0b;
-}
-
-.gray {
-    background: linear-gradient(90deg, #334155, #94a3b8);
-    color: #94a3b8;
-}
-
-.blue {
-    background: linear-gradient(90deg, #1e3a8a, #3b82f6);
-    color: #3b82f6;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-text {
-        max-width: 100%;
-    }
-}
-
 /* ===== PORTFOLIO SECTION ===== */
 .portfolio-section {
     text-align: center;
@@ -345,6 +231,62 @@ body {
     margin-bottom: 40px;
     font-size: 1em;
 }
+
+/* ===== PROJECT DETAILS (Expanded Section) ===== */
+.project-details {
+    display: none;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 25px;
+    padding: 30px;
+    text-align: left;
+    animation: fadeIn 0.6s ease;
+}
+
+.project-details.active {
+    display: block;
+}
+
+.project-gallery {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.project-gallery img {
+    width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.project-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.project-desc {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Animasi muncul */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* ===== FILTER BUTTONS ===== */
 .portfolio-filters {

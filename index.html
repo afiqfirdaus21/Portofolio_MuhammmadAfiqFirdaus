@@ -43,7 +43,8 @@
                 <p><strong>Major:</strong> Business Information Systems</p>
                 <p><strong>Years:</strong> 2023 – Present</p>
                 <p>
-                    Learned and focused on web development, mobile application development, database management, and business system analysis.
+                    Learned and focused on web development, mobile application development, database management, and
+                    business system analysis.
                 </p>
             </div>
 
@@ -56,6 +57,7 @@
     </section>
 
     <!-- ===== PORTFOLIO ===== -->
+    <!-- ===== PORTFOLIO ===== -->
     <section id="portfolio" class="portfolio-section">
         <h2 data-aos="fade-up">My Portfolio</h2>
         <p class="portfolio-desc" data-aos="fade-up">
@@ -64,13 +66,32 @@
         </p>
 
         <div class="portfolio-grid">
+            <!-- === PROJECT 1 === -->
             <div class="portfolio-item" data-aos="zoom-in">
-                <img src="tracer_study.png" alt="Project 1" />
+                <img src="tracer study.png" alt="Project 1" />
                 <div class="portfolio-info">
                     <span>Design</span>
-                    <h3>Website Landing Page Design & Service about Tracer Study</h3>
+                    <h3 onclick="toggleProjectDetails()">Website Landing Page Design & Service about Tracer Study</h3>
                 </div>
             </div>
+
+            <!-- Hidden details for Project 1 -->
+            <div id="project1-details" class="project-details">
+                <div class="project-gallery">
+                    <img src="tracer1.png" alt="Screenshot 1">
+                    <img src="tracer2.png" alt="Screenshot 2">
+                    <img src="tracer3.png" alt="Screenshot 3">
+                </div>
+                <p class="project-desc">
+                    This project is a web-based tracer study platform designed for universities to collect and analyze
+                    alumni data.
+                    Built with Laravel and integrated with a modern UI design, it focuses on usability, responsive
+                    layout, and
+                    effective data visualization to support institutional decision-making.
+                </p>
+            </div>
+
+            <!-- === PROJECT 2 === -->
             <div class="portfolio-item" data-aos="zoom-in">
                 <img src="portfolio2.png" alt="Project 2" />
                 <div class="portfolio-info">
@@ -78,6 +99,8 @@
                     <h3>Website Landing Page Design & Service</h3>
                 </div>
             </div>
+
+            <!-- === PROJECT 3 === -->
             <div class="portfolio-item" data-aos="zoom-in">
                 <img src="portfolio3.png" alt="Project 3" />
                 <div class="portfolio-info">
@@ -87,6 +110,7 @@
             </div>
         </div>
     </section>
+
 
     <footer data-aos="fade-up">
         <p>© 2025 Muhammad Afiq Firdaus. All Rights Reserved.</p>
@@ -101,6 +125,14 @@
             mirror: true,
         });
     </script>
+
+    <script>
+        function toggleProjectDetails() {
+            const details = document.getElementById('project1-details');
+            details.classList.toggle('active');
+        }
+    </script>
+
 </body>
 
 </html>
