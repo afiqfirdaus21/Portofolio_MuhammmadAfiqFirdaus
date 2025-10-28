@@ -538,6 +538,91 @@ body {
     }
 }
 
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+    padding: 100px 10%;
+    background: #f8f9fc;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.3em;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.contact-section h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #3b82f6;
+    display: block;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.contact-intro {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+/* Contact Card Container */
+.contact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Individual Contact Card */
+.contact-card {
+    background: #fff;
+    padding: 25px 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: #1e293b;
+    min-width: 240px;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    background: #f0f6ff;
+}
+
+/* Contact Icon */
+.contact-card i {
+    font-size: 1.8em;
+    color: #3b82f6;
+}
+
+/* Contact Text */
+.contact-card span {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-card {
+        width: 90%;
+        justify-content: center;
+    }
+}
+
 
 
 
