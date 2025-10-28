@@ -636,14 +636,14 @@ body {
 
 /* Contact Text */
 .contact-box .text h3 {
-    font-size: 0.4em;
-    font-weight: 200;
+    font-size: 0.7em;
+    font-weight: 400;
     color: #1e293b;
     margin-bottom: 5px;
 }
 
 .contact-box .text p {
-    font-size: 0.4em;
+    font-size: 0.6em;
     color: #555;
 }
 
@@ -656,7 +656,6 @@ body {
     .contact-box {
         justify-content: center;
         text-align: left;
-        font-size: 1.4em;
     }
 }
 
