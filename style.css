@@ -252,19 +252,24 @@ body {
 
 .project-gallery {
     display: flex;
-    gap: 15px;
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-bottom: 20px;
+    gap: 20px;
 }
 
+
 .project-gallery img {
-    width: 180px;
+    width: 100%;
+    max-width: 320px;
+    /* batasi lebar maksimal agar tidak terlalu besar */
+    height: auto;
+    /* jaga rasio asli */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
+    object-fit: contain;
+    /* pastikan gambar tidak terpotong */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+
 
 .project-gallery img:hover {
     transform: scale(1.05);
