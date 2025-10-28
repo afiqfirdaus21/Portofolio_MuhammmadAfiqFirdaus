@@ -119,6 +119,41 @@ body {
     margin-right: 10px;
 }
 
+/* ========Education ======== */
+.education-section {
+    padding: 80px 10%;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.education-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.education-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.education-item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    max-width: 700px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.education-item:hover {
+    transform: translateY(-5px);
+}
+
+
+
 /* ========== HERO IMAGE ========== */
 .hero-image {
     flex: 1;
