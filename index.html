@@ -66,34 +66,34 @@
 
         <div class="portfolio-grid">
             <!-- === PROJECT 1 === -->
-            <div class="portfolio-item" data-aos="zoom-in">
-                <img src="assets/tracer_study.png" alt="Project 1" />
+            <div class="portfolio-item" onclick="toggleProjectDetails('project1-details')" data-aos="zoom-in">
+                <img src="assets/tracer_study.png" alt="Tracer Study" />
                 <div class="portfolio-info">
                     <span>Design</span>
-                    <h3 onclick="toggleProjectDetails()">Website Landing Page Design & Service about Tracer Study</h3>
+                    <h3>Website Landing Page - Tracer Study</h3>
                 </div>
             </div>
 
             <!-- === PROJECT 2 === -->
-            <div class="portfolio-item" data-aos="zoom-in">
-                <img src="assets/paketdata.png" alt="Project 2" />
+            <div class="portfolio-item" onclick="toggleProjectDetails('project2-details')" data-aos="zoom-in">
+                <img src="assets/paketdata.png" alt="Paket Data" />
                 <div class="portfolio-info">
                     <span>Design</span>
-                    <h3>Website Landing Page Design & Service about Paket Data</h3>
+                    <h3>Website Landing Page - Paket Data</h3>
                 </div>
             </div>
 
             <!-- === PROJECT 3 === -->
-            <div class="portfolio-item" data-aos="zoom-in">
+            <div class="portfolio-item" onclick="toggleProjectDetails('project3-details')" data-aos="zoom-in">
                 <img src="portfolio3.png" alt="Project 3" />
                 <div class="portfolio-info">
                     <span>Design</span>
-                    <h3>Website Landing Page Design & Service about Paket Data</h3>
+                    <h3>Website Landing Page Design</h3>
                 </div>
             </div>
         </div>
 
-        <!-- === Project 1 details (move this outside grid) === -->
+        <!-- === Project 1 details === -->
         <div id="project1-details" class="project-details">
             <div class="project-gallery">
                 <img src="assets/tracer1.png" alt="Screenshot 1">
@@ -101,17 +101,12 @@
                 <img src="assets/tracer3.png" alt="Screenshot 3">
             </div>
             <p class="project-desc">
-                
-                
-                Tracer Study System
-                This project is the result of the Base Learning Project program with a case study aimed at addressing
-                the challenges of manual alumni tracking by creating an efficient and structured digital platform. The
-                developed system allows centralized management of alumni data, facilitates online questionnaire
-                completion by alumni and their supervisors, and presents the data results in the form of informative
-                visualizations on a dashboard.
+                <strong>Tracer Study System</strong> — a web-based application designed to streamline alumni tracking,
+                questionnaire management, and data visualization using Laravel.
             </p>
         </div>
 
+        <!-- === Project 2 details === -->
         <div id="project2-details" class="project-details">
             <div class="project-gallery">
                 <img src="assets/paketdata1.png" alt="Screenshot 1">
@@ -119,9 +114,21 @@
                 <img src="assets/paketdata3.png" alt="Screenshot 3">
             </div>
             <p class="project-desc">
-                Paket Data System
-                This project is designed to provide users with an easy way to purchase and manage their data packages.
-                The system offers a user-friendly interface for selecting data plans, making payments, and tracking usage.
+                <strong>Paket Data System</strong> — an intuitive website allowing users to manage and purchase data
+                packages with secure online payment integration.
+            </p>
+        </div>
+
+
+        <!-- === Project 3 details === -->
+        <div id="project3-details" class="project-details">
+            <div class="project-gallery">
+                <img src="portfolio3-1.png" alt="Screenshot 1">
+                <img src="portfolio3-2.png" alt="Screenshot 2">
+                <img src="portfolio3-3.png" alt="Screenshot 3">
+            </div>
+            <p class="project-desc">
+                <strong>Project 3 Description</strong> — A brief description of the third project goes here.
             </p>
         </div>
 
@@ -144,11 +151,21 @@
     </script>
 
     <script>
-        function toggleProjectDetails() {
-            const details = document.getElementById('project1-details');
-            details.classList.toggle('active');
+        function toggleProjectDetails(id) {
+            const section = document.getElementById(id);
+            const isActive = section.classList.contains('active');
+
+            // Sembunyikan semua project details
+            document.querySelectorAll('.project-details').forEach(el => el.classList.remove('active'));
+
+            // Jika project yang diklik sebelumnya tidak aktif, tampilkan
+            if (!isActive) {
+                section.classList.add('active');
+                section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         }
     </script>
+
 
 </body>
 
