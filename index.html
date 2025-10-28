@@ -146,7 +146,6 @@
                 tuition payments, assignments, exams, and administrative documents.
             </p>
         </div>
-
     </section>
 
     <!-- ===== EXPERIENCE SECTION ===== -->
@@ -176,7 +175,8 @@
                 <p>Contributed to the development a web-based application as a final project in the third semester,
                     focusing on a Student Clearance System. The system was designed to streamline the management of
                     student obligations, including attendance, tuition fee payments, assignment submissions, exams, and
-                    administrative document processing. The project was built using HTML, CSS, and MySQL for data management.</p>
+                    administrative document processing. The project was built using HTML, CSS, and MySQL for data
+                    management.</p>
             </div>
 
             <div class="experience-item" data-aos="fade-right">
@@ -268,19 +268,28 @@
     </script>
 
     <script>
+        // Fungsi utama untuk menampilkan detail
         function toggleProjectDetails(id) {
             const section = document.getElementById(id);
             const isActive = section.classList.contains('active');
 
-            // Sembunyikan semua project details
+            // Tutup semua detail
             document.querySelectorAll('.project-details').forEach(el => el.classList.remove('active'));
 
-            // Jika project yang diklik sebelumnya tidak aktif, tampilkan
+            // Jika yang diklik belum aktif, tampilkan
             if (!isActive) {
                 section.classList.add('active');
                 section.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
         }
+
+        // Klik di luar area project => sembunyikan detail
+        document.addEventListener('click', function (e) {
+            const clickedInsidePortfolio = e.target.closest('.portfolio-item') || e.target.closest('.project-details');
+            if (!clickedInsidePortfolio) {
+                document.querySelectorAll('.project-details').forEach(el => el.classList.remove('active'));
+            }
+        });
     </script>
 
 
