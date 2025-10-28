@@ -577,7 +577,7 @@ body {
 .contact-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     gap: 30px;
 }
 
@@ -588,7 +588,7 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     display: flex;
-    align-items: center;
+    align-items: left;
     gap: 15px;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -619,7 +619,7 @@ body {
 @media (max-width: 768px) {
     .contact-card {
         width: 90%;
-        justify-content: center;
+        justify-content: left;
     }
 }
 
